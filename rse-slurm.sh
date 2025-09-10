@@ -23,4 +23,4 @@ pyh.RPLSplit(SkipLFP=False, SkipHighPass=False); \
 print(time.localtime()); \
 print(time.time()-t0);"
 
-aws sns publish --topic-arn arn:aws:sns:ap-southeast-1:012345678901:awsnotify --message "RPLSEJobDone"
+aws sns publish --topic-arn arn:aws:sns:ap-southeast-1:250544872732:awsnotify --message "RPLSEJobDone"
