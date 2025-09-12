@@ -24,7 +24,8 @@ elif nargs > 2:
     pmode = RESET_MODE
     # get prefix for environment name
     envprefix = sys.argv[1]
-    # get number of environments to create
+    # get number of environments to create in int
+    # altered code here
     nenvs = int(sys.argv[2])
 elif nargs > 1:
     # returns env to the list of environments
@@ -40,9 +41,7 @@ lock = FileLock(lock_path, timeout=time_out_secs)
 
 with lock:
     if pmode == RESET_MODE:
-        # create a list (named clist) of nevns environments with the 
-        # prefix envprefix
-        # add code here
+        # altered code here
 	# create a list (named clist) of nevns environments with the prefix envprefix
         clist = [f"{envprefix}{i}" for i in range(nenvs)]
     else:
@@ -51,14 +50,12 @@ with lock:
 
         if pmode == WRITE_MODE:
             # append item to end of list
-            # add code here
-            # append item to end of list
+            # altered code here
             clist.append(env)                # add new env to list
         else:    
             # get and remove env from clist
-            # get and remove env from clist
+            # altered code here
             env = clist.pop(0)               # take the first env (FIFO style)
-            # add code here
             # return env name
             print(env)
 

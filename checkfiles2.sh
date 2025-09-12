@@ -7,7 +7,7 @@ echo "Number of mda files"
 find mountains -name "firings.mda" | wc -l
 
 echo "Start Times"
-head -n 1 *.out
+head -n 1 rplpl-slurm*.out
 
 echo "End Times"
-tail -n 5 *.out 
+find session01 -name "*high*out" -or -name "*lfp*out" | xargs tail -n 1 | sort
