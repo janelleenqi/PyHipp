@@ -6,7 +6,7 @@
 #SBATCH --ntasks=1   # number of processor cores (i.e. tasks)
 #SBATCH --nodes=1   # number of nodes
 #SBATCH --cpus-per-task=1      # number of processors per task
-#SBATCH -J "freq-alurm"   # job name
+#SBATCH -J "freq-slurm"   # job name
 
 ## /SBATCH -p general # partition (queue)
 #SBATCH -o freq-slurm.%N.%j.out # STDOUT
